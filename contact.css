@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #f8f9fa;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+.container .row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.row section.col{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.row section.left{
+    flex-basis: 40%;
+    background: linear-gradient(135deg, rgba(30,144,255,0.1) 0%, rgba(0,191,255,0.1) 100% );
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.row section.right{
+    flex-basis: 60%;
+    background: rgba(255,255,255,0.03);
+}
+
+.inner-container{
+    width: 100%;
+    height: 100%;
+}
+
+section.left .contactTitle h2{
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+section.left .contactTitle h2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #00b4db , #0083b0);
+    border-radius: 3px;
+}
+
+section.left .contactTitle p{
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contactInfo{
+    margin: 25px 0;
+}
+
+.iconGroup{
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+}
+
+.iconGroup:hover{
+    transform: translateX(5px);
+}
+
+.iconGroup .icon{
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 180, 219,0.1);
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #00b4db;
+    transition: all 0.3s ease;
+}
+
+.iconGroup:hover .icon{
+    background-color: rgba(0,180,219,0.2);
+    transform: scale(1.1);
+}
+
+.iconGroup .details span{
+    display: block;
+}
+
+.iconGroup .details span:nth-child(1){
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.iconGroup .details span:nth-child(2){
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.socialMedia{
+    margin-top: 40px;
+}
+
+.socialMedia p{
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.socialMedia .social-icons{
+    display: flex;
+    gap: 15px;
+}
+
+.socialMedia a{
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.socialMedia a:hover{
+    background: linear-gradient(135deg, #00b4db , #0083b0);
+    transform: translateX(-3px);
+    box-shadow: 0 5px 15px rgba(0,180, 219, 0.3);
+}
+
+section.right .messageForm h3{
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+section.right .messageForm p{
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 30px;
+}
+
+.messageForm{
+    /* display: flex;
+    justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.inputGroup{
+    margin: 15px 0;
+    position: relative;
+}
+
+.messageForm .halfwidth{
+    flex-basis: 48%;
+}
+
+.messageForm .fullwidth{
+    flex-basis: 100%;
+}
+
+.messageForm input,
+.messageForm textarea{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 0;
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.messageForm input:focus,
+.messageForm textarea:focus{
+    border-bottom-color: #00b4db ;
+}
+
+.messageForm textarea{
+    resize: none;
+    height: 150px;
+    display: block;
+    margin-top: 20px;
+}
+
+.inputGroup label{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.inputGroup input:focus ~ label,
+.inputGroup textarea:focus ~ label,
+.inputGroup input:valid ~ label,
+.inputGroup textarea:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #00b4db;
+}
+
+.inputGroup button{
+    padding: 12px 30px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,180, 219, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.inputGroup button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,180, 219, 0.4);
+}
+
+.inputGroup button:active{
+    transform: translateY(0);
+}
+
+
+@media(max-width:600px){
+    .messageForm .halfwidth{
+        flex-basis: 100%;
+    }
+}
+
+@media(max-width:900px){
+    .container .row{
+        flex-wrap: wrap;
+    }
+
+    .row section.left,
+    .row section.right{
+        flex-basis: 100%;
+        padding: 30px;
+    }
+
+    .row section.left{
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+@media(max-width:500px){
+    .row section.col{
+        padding: 25px;
+    }
+
+    .iconGroup .icon{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .iconGroup .details span:nth-child(2){
+        font-size: 14px;
+    }
+
+    .inputGroup button{
+        width: 100%;
+        justify-content: center;
+    }
+}
